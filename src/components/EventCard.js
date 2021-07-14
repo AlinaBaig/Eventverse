@@ -1,5 +1,7 @@
 import React from "react";
 import "../css/event.css";
+import { useContext } from "react";
+import { GlobalList } from "../helper/GlobalList";
 
 
 const EventCard = ({
@@ -10,16 +12,19 @@ const EventCard = ({
   venue,
   datetime
 }) => {
-  const saveIt = () => {
+
+  const {globalList,setGlobalList} = useContext(GlobalList);
+    const saveIt = () => {
     var dict ={}
     let arr=JSON.parse(localStorage.getItem('lists'));
-    console.log("InMem ",arr);
-    if(!arr)
-      arr={}
-    console.log("gotMem ",arr);
-    arr[id]=[facebook_page_url,datetime,image_url,event_url,venue];
-    console.log("afterAdd ",arr);
-     localStorage.setItem('lists', JSON.stringify(arr));
+    if(arr)
+    {
+      arr[id]=[facebook_page_url,datetime,image_url,event_url,venue];
+      localStorage.setItem('lists', JSON.stringify(arr));
+      setGlobalList(arr.length)
+    }
+    else{
+    arr={}}
   };
 
   var dt = datetime.split("T");
@@ -56,5 +61,4 @@ const EventCard = ({
    
    );
 };
-
 export default EventCard;
