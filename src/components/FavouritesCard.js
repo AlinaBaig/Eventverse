@@ -4,6 +4,7 @@ import "../css/event.css";
 import { GlobalList } from "../helper/GlobalList";
 
 
+
 const EventCard = ({
   id,
   facebook_page_url,
@@ -26,8 +27,6 @@ const EventCard = ({
 
         }
       };
-
-
 
   var dt = datetime.split("T");
   const d = new Date(dt[0])
