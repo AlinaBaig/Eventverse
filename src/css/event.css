@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+
+:root {
+  --orange: #ffa500;
+}
+
+* {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+*::selection {
+  background: var(--orange);
+  color: #fff;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.heading {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 2.5rem 0;
+}
+
+.heading span {
+  font-size: 3.5rem;
+  background: rgba(255, 165, 0, 0.2);
+  color: var(--orange);
+  border-radius: 0.5rem;
+  padding: 0.2rem 1rem;
+}
+
+.heading span.space {
+  background: none;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--orange);
+  color: #fff;
+  padding: 0.2rem 1rem;
+  border: 0.2rem solid var(--orange);
+  cursor: pointer;
+  font-size: 1.5rem;
+
+  border-radius: 1rem;
+}
+.btnLarge {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--orange);
+  color: #fff;
+  padding: 0.8rem 3rem;
+  border: 0.2rem solid var(--orange);
+  cursor: pointer;
+  font-size: 1.7rem;
+  border-radius: 0.7rem;
+}
+.btnLarge:hover {
+  background: rgba(255, 165, 0, 0.2);
+  color: var(--orange);
+}
+.btn:hover {
+  background: rgba(255, 165, 0, 0.2);
+  color: var(--orange);
+}
+
+.btnIcon {
+  display: inline-block;
+  margin-top: 1rem;
+
+  background: var(--orange);
+  color: #fff;
+
+  /* padding: 1rem; */
+  border: 0.2rem solid var(--orange);
+  cursor: pointer;
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  /* padding-bottom: 1rem; */
+  border-radius: 2.5rem;
+  vertical-align: middle;
+}
+.btnIcon:hover {
+  background: rgba(255, 165, 0, 0.2);
+  color: var(--orange);
+}
+a .btnIcon i {
+  display: flex;
+  padding-top: 0.6rem;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+.btnIcon i {
+  display: flex;
+  padding-top: 0.2rem;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 9%;
+}
+
+header .logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+header .logo span {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--orange);
+  text-transform: uppercase;
+}
+
+header .icons i {
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+header .icons i:hover {
+  color: var(--orange);
+}
+
+header .search-bar-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 1rem 2rem;
+  background: #333;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+header .search-bar-container.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header .search-bar-container #search-bar {
+  width: 100%;
+  padding: 1rem;
+  text-transform: none;
+  color: #333;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+}
+
+header .search-bar-container label {
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+
+header .search-bar-container label:hover {
+  color: var(--orange);
+}
+
+#menu-bar {
+  color: #fff;
+  border: 0.1rem solid #fff;
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.home {
+  min-height: 93vh;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url(../assets/bg1.jpg) no-repeat center center / cover;
+}
+
+.home .content {
+  padding-top: 12rem;
+  text-align: center;
+}
+
+.home .content h3 {
+  font-size: 4.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.home .content p {
+  font-size: 2.5rem;
+  color: #fff;
+  padding: 0.5rem 0;
+}
+.eventCard .box-container .empty {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.eventCard .box-container {
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2.5rem;
+}
+
+.eventCard .box-container .box {
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.6rem;
+  height: 21rem;
+  padding-bottom: 1rem;
+  width: 18rem;
+  position: relative;
+}
+
+.eventCard .box-container .box img {
+  height: 45%;
+  width: 100%;
+  object-fit: cover;
+}
+.eventCard .box-container .box .content .par {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eventCard .box-container .box .content {
+  position: absolute;
+
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: #333;
+  padding: 2rem;
+  padding-top: 1rem;
+}
+
+.eventCard .box-container .box .content h3 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.eventCard .box-container .box .content h1 {
+  font-size: 1.6rem;
+  color: #333;
+  padding-bottom: 0.5rem;
+}
+.eventCard .box-container .box .content h2 {
+  font-size: 1.2rem;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 23ch;
+}
+.eventCard .box-container .box .content .price {
+  font-size: 2rem;
+  color: #333;
+}
+
+.artistCard .box-container {
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.artistCard .box-container .box {
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border: 1rem solid #fff;
+  border-radius: 0.5rem;
+  height: 25rem;
+  width: 35rem;
+  position: relative;
+}
+
+.artistCard .box-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.artistCard .box-container .box .content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  padding-top: 5rem;
+}
+
+.artistCard .box-container .box:hover .content {
+  top: 0;
+}
+
+.artistCard .box-container .box .content h3 {
+  font-size: 2.5rem;
+  color: #eee;
+}
+.footer {
+  background: #333;
+}
+
+.footer .credit {
+  text-align: center;
+  padding: 0rem 1rem;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #fff;
+}
+
+.footer .credit span {
+  font-size: 2rem;
+  font-weight: normal;
+  color: var(--orange);
+}
+
+/* media queries  */
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading span {
+    font-size: 2.5rem;
+  }
+}
