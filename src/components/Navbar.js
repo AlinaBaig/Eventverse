@@ -48,7 +48,7 @@ const Navbar = () => {
         <Link to='/TopArtists' className="icons">
             <i className="fas fa-fire-alt"></i>
         </Link>
-        <Link to='/SavedEvents' className="icons">
+        <Link to='/Favourites' className="icons">
             <i className="fas fa-heart"></i>
         </Link>
 
