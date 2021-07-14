@@ -12,7 +12,6 @@ const ArtistCard = ({
 
   function clickHandler(){
     setLoggedIn(`${artist[0]}`);
-    console.log("loggedIn,m,dvdv  ",loggedIn);
     history.push("/Events");
   }
   return (
