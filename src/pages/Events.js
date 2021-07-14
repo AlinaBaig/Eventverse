@@ -15,7 +15,6 @@ const SpecialChar = (artistName) => {
 const Events = () => {
   
   const {loggedIn,setLoggedIn} = useContext(LoginContext);
-  console.log("search = ",loggedIn);
   const [eventData, setEventData] = useState();
   const [artistData, setArtistData] = useState();
   const [errStatus, setErrStatus] = useState();
@@ -24,9 +23,7 @@ const Events = () => {
 
   useEffect(() => {
     setErrStatus(null);
-    console.log("console 1 =>> ",loggedIn);
     if(loggedIn){
-    console.log("console 2 =>> ",loggedIn);
     axios
       .get( `https://cors-access-allow.herokuapp.com/https://rest.bandsintown.com/artists/${SpecialChar(loggedIn)}?app_id=1234`   )
       .then(res => {
@@ -50,7 +47,6 @@ const Events = () => {
 
 if (errStatus)
  {
-  console.log("Not justified = ",loggedIn);
   heading="No Results To Show";
   showComponent=2; 
 
