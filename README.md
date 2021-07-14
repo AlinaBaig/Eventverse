@@ -1,7 +1,7 @@
 # Eventverse
 
 > Web App to discover events and artists
-> [https://evenverse-b5fb2.web.app]
+>Web App Link [https://eventverse-4efd0.web.app/TopArtists]
 
 ## bandsintown API
 
