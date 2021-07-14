@@ -10,17 +10,16 @@ const EventCard = ({
   venue,
   datetime
 }) => {
-
-  
-  
   const saveIt = () => {
+    var dict ={}
     let arr=JSON.parse(localStorage.getItem('lists'));
+    console.log("InMem ",arr);
     if(!arr)
-      arr=[]
-    arr.push( {id:id,facebook_page_url:facebook_page_url,date:datetime,  img:image_url,  url:event_url,  Vn:venue})
-    localStorage.setItem('lists', JSON.stringify(arr));
-    console.log("dscsdvcasdvsdvfsdvsf===",JSON.parse(localStorage.getItem('lists')));
-
+      arr={}
+    console.log("gotMem ",arr);
+    arr[id]=[facebook_page_url,datetime,image_url,event_url,venue];
+    console.log("afterAdd ",arr);
+     localStorage.setItem('lists', JSON.stringify(arr));
   };
 
   var dt = datetime.split("T");
@@ -44,7 +43,11 @@ const EventCard = ({
 
                    <a href="http://www.facebook.com/5330548481" className="icons"> <i className="fab fa-facebook"></i></a> */}
                    <button className="btnIcon"  onClick={saveIt}><i className="fas fa-heart"></i></button>
-                    <a href={ event_url.length>0 ? `${facebook_page_url}`:  `https://www.facebook.com/` } className="btnIcon" ><i className="fab fa-facebook-f"></i></a> 
+                   <button className="btnIcon"  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href=facebook_page_url;      }}
+                    >
+                   <i className="fab fa-facebook-f"></i></button>
                    <a href={ event_url.length>0 ? `${event_url}`:  `https://www.bandsintown.com/` } className="btn">Tickets</a> 
 
                 </div>  
