@@ -27,10 +27,10 @@ const Favourites = () => {
   useEffect(() => {
     let arr = localStorage.getItem('lists');
     if(arr)
-       {    setFavourites(JSON.parse(localStorage.getItem('lists')))         }
+       {    setFavourites(JSON.parse(localStorage.getItem('lists')))   
+       setGlobalList(localStorage.getItem('lists').length);      }
     else
-      {setEmpty(true);}
-    setGlobalList(localStorage.getItem('lists').length);
+      {setEmpty(true);      }
     }, [globalList]);
 
 if(empty || favourites==undefined)
@@ -46,8 +46,6 @@ return (
     </section> )
 }
 else{
-
-  
  return ( 
   <section className="eventCard" id="eventCard">
     <h1 className="heading">  <span>Favourites</span>        </h1>
@@ -64,15 +62,10 @@ else{
                  venue={favourites[key][4]}
                  />))
           }
-           </div>
-         
-   </section>
-  
-      
+           </div>  
+   </section>      
   );
    
 };
 }
-
 export default Favourites;
-
