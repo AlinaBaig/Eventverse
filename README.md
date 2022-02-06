@@ -16,7 +16,7 @@ npm install
 # Serve on localhost:3000
 npm start
 
-Request temporary acces  if asked by https://cors-anywhere.herokuapp.com/corsdemo
+Request temporary access  if asked by https://cors-anywhere.herokuapp.com/corsdemo
 
 ```
 
